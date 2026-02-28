@@ -47,6 +47,21 @@
     .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
     .ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
+        .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 998;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
     /* ══ HERO ══ */
     #home{
       min-height:100vh;display:flex;align-items:center;
@@ -233,6 +248,13 @@ position:relative;z-index:1;width:100%;
       background:var(--card);border:1px solid var(--border);
       border-radius:16px;overflow:hidden;transition:all .3s;
     }
+    .proj-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
     .proj-card:hover{border-color:rgba(123,108,245,.4);transform:translateY(-8px);box-shadow:0 24px 56px rgba(0,0,0,.45)}
     .proj-thumb{
       height:220px;position:relative;overflow:hidden;
@@ -452,17 +474,3 @@ position:relative;z-index:1;width:100%;
 
 
 
-    .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  z-index: 998;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}

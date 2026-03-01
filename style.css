@@ -471,6 +471,16 @@ position:relative;z-index:1;width:100%;
       .photo-ring{width:220px;height:220px}
     }
 
+    /* ══ DISABLE SIDE ANIMATIONS ON MOBILE ══ */
+    @media(max-width:768px){
+      .reveal-left,.reveal-right{
+        transform:translateY(32px);
+      }
+      .reveal-left.visible,.reveal-right.visible{
+        transform:translateY(0);
+      }
+    }
+
 
 
 

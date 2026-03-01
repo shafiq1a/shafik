@@ -17,6 +17,8 @@ function closeMenu() {
   ham.classList.remove('open', 'active');
   menu.classList.remove('open', 'active');
   overlay.classList.remove('active');
+  // Force reset spans to 3 lines
+  ham.querySelectorAll('span').forEach(s => s.style.cssText = '');
 }
 
 ham.addEventListener('click', () => {

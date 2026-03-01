@@ -44,9 +44,9 @@
     .nav-menu a:hover::after,.nav-menu a.active::after{width:100%}
     .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
     .ham span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .28s}
-    .ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-    .ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .ham.open span:nth-child(1),.ham.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .ham.open span:nth-child(2),.ham.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .ham.open span:nth-child(3),.ham.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
         .overlay {
   position: fixed;
